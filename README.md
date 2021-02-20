@@ -9,7 +9,7 @@ There are two kinds of templates:
   - Extended template:[BHArticle](BHBeamer.cls)  [CSArticle](CSBeamer.cls)   
 
 
-When using the template, download the corresponding cls file (*[BHArticle](BHArticle.cls) is based on [LCSArticle](LCSArticle.cls),so if you use the [BHArticle](BHArticle.cls), you need to download [LCSArticle](LCSArticle.cls) as well as [BHArticle](BHArticle.cls). The same for others*) and the [logos folder](/logos).   
+To use these template, download the [logos folder](/logos) and the corresponding .cls file (*[BHArticle](BHArticle.cls) is based on [LCSArticle](LCSArticle.cls), so if you use [BHArticle](BHArticle.cls), you need to download [LCSArticle](LCSArticle.cls) as well as [BHArticle](BHArticle.cls). The same for others*).   
 Some examples are given in [article](article.tex), [beamer](beamer.tex).   
 The version for overleaf is availiable on [this link](https://www.overleaf.com/read/tcbxdycqrwjg)
 
