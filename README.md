@@ -5,4 +5,4 @@ There are two templates:
 - beamer template [LCSBeamer](LCSBeamer.cls)  [BHArticle](BHBeamer.cls)  [CSArticle](CSBeamer.cls)   
 The version for overleaf is availiable on [this link](https://www.overleaf.com/read/tcbxdycqrwjg)
 
-A usage guide is available [here]('Usage Guide.pdf')
+A usage guide is available [here](Usage Guide.pdf)
