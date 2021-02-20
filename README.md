@@ -1,5 +1,5 @@
 # LaTeX-template
-This is the \LaTeX template created for homework in CentraleSupélec and Beihang University.  
+This is the $\LaTeX$ template created for homework in CentraleSupélec and Beihang University.  
 There are two kinds of templates:  
 - article template [LCSArticle](LCSArticle.cls)  [BHArticle](BHArticle.cls)  [CSArticle](CSArticle.cls)   
 - beamer template [LCSBeamer](LCSBeamer.cls)  [BHArticle](BHBeamer.cls)  [CSArticle](CSBeamer.cls)   
