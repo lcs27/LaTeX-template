@@ -17,4 +17,4 @@ Some examples are given in [article](article.tex), [beamer](beamer.tex).
 The version for overleaf is availiable on [this link](https://www.overleaf.com/read/tcbxdycqrwjg).
 
 # Install one the local TeX Live editor
-The following link might be useful:(link)[https://www.cnblogs.com/yfjack/p/4639185.html].
+The following link might be useful:[link](https://www.cnblogs.com/yfjack/p/4639185.html).
