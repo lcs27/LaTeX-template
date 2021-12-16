@@ -1,5 +1,5 @@
 # LaTeX-template
-This is the $\LaTeX$ template created by lcs27 for homework in CentraleSupélec and Beihang University.  
+This is the $$\LaTeX$$ template created by lcs27 for homework in CentraleSupélec and Beihang University.  
 
 ## Mathmatical symbols
 [LCSsymbols](./symbols/LCSsymbols.sty)designed a set of mathmatical symbols which may be useful. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.
