@@ -2,8 +2,11 @@
 This is the $\LaTeX$ template created by lcs27 for homework in CentraleSupélec and Beihang University.  
 
 ## Mathmatical symbols
-[LCSsymbols](.\symbols\LCSsymbols.sty)designed a set of mathmatical symbols which may be useful. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.
-For a better explanation of this, please read the [user guide](.\symbols\LCSsymbols.md).
+[LCSsymbols](./symbols/LCSsymbols.sty)designed a set of mathmatical symbols which may be useful. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.
+For a better explanation of this, please read the [user guide](./symbols/LCSsymbols.md).   
+
+
+DON'T SEE FOLLOWING NOTES:
 ;## Contents
 ;There are two kinds of templates:  
 ;- article template 
