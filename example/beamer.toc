@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{章节一}{3}{0}{1}
+\beamer@sectionintoc {2}{章节二}{4}{0}{2}
+\beamer@sectionintoc {3}{章节三}{6}{0}{3}

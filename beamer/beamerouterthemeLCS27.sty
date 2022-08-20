@@ -1,0 +1,65 @@
+\mode<presentation>
+
+\newcommand{\schoollogo}[1]{\newcommand{\lcs@schoollogo}{#1}\def\mbShowLogo}
+%\newcommand{\lablogo}[1]{\newcommand{\lcs@lablogo}{#1}\def\mbShowLogo}
+    
+% Remove title part
+\setbeamertemplate{frametitle}{
+\leavevmode%
+\usebeamerfont{framesection}%
+\insertsection%
+\vskip0pt%
+\usebeamerfont{frametitle}%
+\insertframetitle%
+\usebeamerfont{framesubtitle}%
+\hspace{2em}%
+\insertframesubtitle%
+}
+
+\setbeamertemplate{navigation symbols}{}
+
+\RequirePackage{tikz}
+\setbeamertemplate{headline}{
+    \ifdefined\mbShowLogo
+        \usebeamerfont{frametitle}
+        
+        \begin{tikzpicture}[overlay,remember picture]
+            \ifdefined\lcs@schoollogo
+                \node[anchor=north east,inner sep=0pt] at (current page.north east)
+                {\includegraphics[height=4ex]{\lcs@schoollogo}};
+            \fi
+
+            % \ifdefined\lcs@lablogo
+            %     \node[anchor=north east,inner sep=0pt] at (current page.center)
+            %     {\includegraphics[height=5ex]{\lcs@lablogo}};
+            % \fi
+        \end{tikzpicture}
+        
+    \fi
+}
+
+% Footer information line with title, author and slide number
+\setbeamertemplate{footline}{
+    \leavevmode
+    \hbox{
+        \usebeamerfont{footline}%
+        \begin{beamercolorbox}[
+            wd=\textwidth,
+            ht=3ex,
+            dp=1.25ex
+        ]{footline}
+            \hspace{1cm}
+            \insertshorttitle
+            \hfill
+            \insertshortauthor
+            \hspace{2em}
+            \insertframenumber{} / \inserttotalframenumber%
+            \hspace{1cm}
+        \end{beamercolorbox}
+    }
+    \vskip0pt
+}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\mode<all>
