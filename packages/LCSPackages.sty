@@ -7,25 +7,12 @@
 %% Page
 \RequirePackage{geometry}
 \RequirePackage{inputenc}
-
-% Chinese part
-\RequirePackage[fontset=none,UTF8]{ctex}
-\setCJKmainfont{Dc62.ttf}[BoldFont={Dc48.ttf}, ItalicFont={Dc57.ttf}]
-\setCJKsansfont{Dc62.ttf}[BoldFont={Dc48.ttf}, ItalicFont={Dc57.ttf}]
-\setCJKmonofont{Dc62.ttf}[BoldFont={Dc48.ttf}, ItalicFont={Dc57.ttf}]
-
-\RequirePackage{geometry}
 %\RequirePackage{titlesec}   %Margin
 \RequirePackage{setspace}
 %\RequirePackage{titletoc}
-%\RequirePackage{CJKutf8}
 
-%% Bibliography & Reference
-\RequirePackage[style=ieee]{biblatex} %Bibliography
-\RequirePackage{hyperref} %Reference
-\hypersetup{hidelinks}
-\RequirePackage{url} % Use url as reference
-
+\RequirePackage{\sourcepath{packages/LCS27symbols}}
+\RequirePackage{\sourcepath{packages/LCS27reference}}
 %% Graph & Color
 \RequirePackage{graphicx} %use graph format
 \RequirePackage{graphics}
@@ -47,104 +34,29 @@
 \RequirePackage{algorithmic}
 
 %% Programming Language
-\RequirePackage{listings}
-\definecolor{codegreen}{rgb}{0,0.6,0}
-\definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
-\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-\lstdefinestyle{MATLAB}{language=Matlab,
-    backgroundcolor=\color{white},     
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-}
 
-\lstdefinestyle{Python}{
-    language=Python,
-    backgroundcolor=\color{white},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-}
 
-\lstdefinestyle{C++}{
-    language=C++,
-    backgroundcolor=\color{white},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-} 
 
-\lstdefinestyle{TeX}{
-    language=TeX,
-    backgroundcolor=\color{white},    
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
-} 
-
-\newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
 
 %---------------- Self-defined Command--------------------%
 
 %% Theorems
 \RequirePackage{etoolbox}
 \setbeamertemplate{theorems}[numbered] 
-\newtheorem{proposition}{\propositionwd}
-
 \theoremstyle{definition}
-\newtheorem{remark}{\remarkwd}
-\newtheorem{quiz}{\quizwd}
-\newtheorem{answer}{\answerwd}
+\newtheorem{proposition}{\propositionwd}[section]
+\newtheorem{remark}{\remarkwd}[section]
+\newtheorem{quiz}{\quizwd}[section]
+\newtheorem{answer}{\answerwd}[section]
 
+%% Theorems
+\newtheorem{lemma}{\lemmawd}[section]
+\newtheorem{theorem}{
+    \ifthenelse{\boolean{@english}}{Theorem}{Théorème}
+}[section]
+\newtheorem{remark}{
+    \ifthenelse{\boolean{@english}}{Remark}{Remarque}
+}[section]
 
 
 

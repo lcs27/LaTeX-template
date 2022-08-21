@@ -1,10 +1,20 @@
 # LaTeX-template
-This is the $$\LaTeX$$ template created by lcs27 for homework in CentraleSupélec and Beihang University.  
+This is the $$\LaTeX$$ template created by lcs27. This template aims at allowing Chinese-English-French multilanguage typing, by providing separable packages for the ease of modular building.
 
+# Fully-equipped template
+Method of use:
+## Article
+
+## Beamer
+
+# Support packages
+Method of use:
 ## Mathmatical symbols
-[LCSsymbols](./symbols/LCSsymbols.sty)designed a set of mathmatical symbols which may be useful. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.
-For a better explanation of this, please read the [user guide](./symbols/LCSsymbols.md).   
+[LCSsymbols](./symbols/LCSsymbols.sty)designed a set of mathmatical symbols which may be useful in mechanics, typically in fluid mechanics. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.    
+`To be implemented!` A passage using this template may be converted to classical template with a transformer provided in the folder.   
+User's guide is provided in [this link](./symbols/LCSsymbols.pdf).   
 
+## Language support
 
 DON'T SEE FOLLOWING NOTES:
 ;## Contents

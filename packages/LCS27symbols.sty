@@ -1,8 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 
-% Self defined language package
-
-
+%% Math Packages
 \RequirePackage{amsmath}%Math formula
 \RequirePackage{amsfonts}%Math fonts
 \RequirePackage{amsthm}%Theorem-like structures
@@ -13,7 +11,7 @@
 \RequirePackage{siunitx} %Notation scientific (Ex.: \num{2e+9})
 \RequirePackage{stmaryrd}
 
-%% MathCommands
+%% Math Commands
 \newcommand{\deri}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
 \newcommand{\deriN}[3]{\frac{\mathrm{d}^{#3} #1}{\mathrm{d} #2^{#3}}}
 \newcommand{\ParDeri}[2]{\frac{\partial #1}{\partial #2}}
@@ -21,9 +19,7 @@
 \newcommand{\Deri}[2]{\frac{\mathrm{D} #1}{\mathrm{D} #2}}
 \newcommand{\DeriN}[3]{\frac{\mathrm{D}^{#3} #1}{\mathrm{D} #2^{#3}}}
 
-\newcommand{\cst}{
-    \ifthenelse{\boolean{@english}}{\mathbf{constant}}{\mathbf{constante}}
-}
+\newcommand{\cst}{\mathbf{\constant}}
 
 
 \def\laplace{\triangle}
@@ -154,9 +150,6 @@
 \newcommand{\setRR}{\mathbb{R} \times \mathbb{R}}
 \newcommand{\rel}{\Rcal}
 \newcommand{\ssi}{\iff}
-
-
-
 
 \def\Abf{\textbf{A}}
 \def\Bbf{\textbf{B}}
