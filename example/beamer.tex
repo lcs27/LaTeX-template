@@ -10,14 +10,13 @@
 \schoollogo{../fig/BeihangLogo.jpg}
 %\lablogo{../fig/CentraleSupelecRVB.jpg}
 
+\title{一个\LaTeX模板}
+\author{LCS27}
 
-\author[]{罗宸晟}
-\title{标题}
-\institute{北京航空航天大学中法工程师学院/国际通用工程师学院 \\ 数理实验室-复杂系统实验室}
+\institute{My dear institute}
 \date{\today}
 
-\usepackage{lipsum} % for dummy text
-\usepackage{zhlipsum} 
+
 
 \begin{document}
 
@@ -26,7 +25,7 @@
 \tableofcontents
 \end{frame}
 \section{章节一}
-\begin{frame}[allowframebreaks]{标题一}{简述}
+\begin{frame}{标题一}{简述}
 \zhlipsum[10]
 \end{frame}
 
@@ -39,20 +38,27 @@
 \end{frame}
 
 \section{章节三}
-
+\subsection{副章节一}
 \begin{frame}[allowframebreaks]{标题四}{具体内容}
 \zhlipsum[1]
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{../picture/1.jpg}
 \end{figure}
-
+\end{frame}
+\subsection{副章节二}
+\begin{frame}[allowframebreaks]{标题五}{具体内容}
 \zhlipsum[2]
 \begin{itemize}
     \item \zhlipsum[3]
     \item \zhlipsum[4]
     \item \zhlipsum[5]
 \end{itemize}
-\zhlipsum[6]
+\end{frame}
+
+\begin{frame}{标题六}{具体内容}
+\begin{block}{block title}
+ABCDSGJGAJLHKL8
+\end{block}
 \end{frame}
 \end{document}

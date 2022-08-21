@@ -1,19 +1,31 @@
 \mode<presentation>
 
 \ifdefined\stylepath
-
 \else
 	\newcommand{\stylepath}[1]{\sourcepath{beamer/#1}}
 \fi
+
+
 \RequirePackage{\stylepath{beamerfontthemeLCS27}}
 \RequirePackage{\stylepath{beamercolorthemeLCS27}}
 \RequirePackage{\stylepath{beamerinnerthemeLCS27}}
 \RequirePackage{\stylepath{beamerouterthemeLCS27}}
 
 
-\RequirePackage{\sourcepath{packages/LCSPackages}}
-
+\RequirePackage{\sourcepath{packages/LCS27Packages}}
 \RequirePackage{\sourcepath{lang/chinese}}
+
+%% Theorems
+\RequirePackage{etoolbox}
+\setbeamertemplate{theorems}[numbered] 
+\theoremstyle{definition}
+\newtheorem{proposition}{\propositionwd}[section]
+\newtheorem{remark}{\remarkwd}[section]
+\newtheorem{quiz}{\quizwd}[section]
+\newtheorem{answer}{\answerwd}[section]
+%\renewtheorem{lemma}{\lemmawd}[section]
+%\renewtheorem{theorem}{\theoremwd}[section]
+
 \mode<all>
 
 % Thanks to the work of 

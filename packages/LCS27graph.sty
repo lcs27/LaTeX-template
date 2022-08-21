@@ -1,0 +1,15 @@
+\RequirePackage{graphicx} %use graph format
+\RequirePackage{graphics}
+\RequirePackage[justification=centering]{caption} %Graph caption
+\RequirePackage{subcaption} %Graph sub-caption
+\RequirePackage{float} %Graph Placement
+
+%% Simple Image Insert
+\newcommand{\InsertFigure}[4]{
+\begin{figure}[ht]
+\centering
+\includegraphics[height=#2]{#1}
+\caption{#3}
+\label{fig: #4}
+\end{figure}
+}

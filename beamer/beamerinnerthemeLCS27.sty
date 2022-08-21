@@ -37,25 +37,57 @@
     \vfill
 
     \begin{center}
-            \vspace{1em}
+            
             \usebeamerfont{title}
-            \inserttitle
+            \vspace{3em}
 
+            \inserttitle
+            
             \usebeamertemplate{separator}
 
             \usebeamerfont{author}
-            \vspace{2em}
+            \vspace{1em}
             \insertauthor
 
-            \vspace{2em}
+            \vspace{1em}
             \usebeamerfont{details}
-            %\insertinstitute
+            \insertinstitute\\
             \vspace{1em}
             \insertdate
     \end{center}
 
 }
 
+\setbeamertemplate{endpage}{%
+    \setbeamertemplate{footline}{} 
+    \begin{frame}
+        \begin{tikzpicture}[overlay,remember picture]
 
+            \node[anchor=north west,inner sep=0pt] at (current page.north west)
+                {\includegraphics[width=\paperwidth]{\lcs@background}};
+        \end{tikzpicture}
+
+        \vfill
+
+        \begin{center}
+            
+            \usebeamerfont{title}
+            \vspace{1em}
+            \thankyouwd
+            
+            \usebeamertemplate{separator}
+
+            \usebeamerfont{details}
+            \vspace{1ex}
+            \inserttitle\\
+            \vspace{1ex}
+            \insertinstitute\quad \insertauthor\\
+            \vspace{1ex}
+            \insertdate
+        \end{center}
+    \end{frame}
+}
+
+\AtEndDocument{\usebeamertemplate{endpage}}
 
 \mode<all>

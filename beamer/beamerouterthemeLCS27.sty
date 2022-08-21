@@ -1,19 +1,32 @@
 \mode<presentation>
 
-\newcommand{\schoollogo}[1]{\newcommand{\lcs@schoollogo}{#1}\def\mbShowLogo}
-%\newcommand{\lablogo}[1]{\newcommand{\lcs@lablogo}{#1}\def\mbShowLogo}
+\RequirePackage{geometry}
+\geometry{top=0cm,bottom=0cm}
+\RequirePackage{inputenc}
+%\RequirePackage{titlesec}   %Margin
+\RequirePackage{setspace}
+%\RequirePackage{titletoc}
+
+\newcommand{\schoollogo}[1]{\newcommand{\lcs@schoollogo}{#1}\def\mbShowLogo{true}}
+%\newcommand{\lablogo}[1]{\newcommand{\lcs@lablogo}{#1}\def\mbShowLogo{true}}
     
 % Remove title part
 \setbeamertemplate{frametitle}{
 \leavevmode%
 \usebeamerfont{framesection}%
-\insertsection%
+\insertsection
+\ifx\insertsubsection\@empty
+\else
+    ——\insertsubsection
+\fi
 \vskip0pt%
 \usebeamerfont{frametitle}%
 \insertframetitle%
 \usebeamerfont{framesubtitle}%
-\hspace{2em}%
-\insertframesubtitle%
+\hspace{1em}%
+\textit{\insertframesubtitle}%
+\vskip0pt%
+
 }
 
 \setbeamertemplate{navigation symbols}{}
@@ -33,9 +46,18 @@
             %     \node[anchor=north east,inner sep=0pt] at (current page.center)
             %     {\includegraphics[height=5ex]{\lcs@lablogo}};
             % \fi
+            %\usebeamercolor{separator}
+            % \node[anchor=north east,inner sep=0pt,yshift=4pt] at (current page.north west)
+            % {\textcolor{fg}{\rule{\textwidth}{1pt}}};
+            \node[yshift=-2em](A)at (current page.north west){};
+            \node[xshift=\textwidth,yshift=-2em](B)at (current page.north west){};
+            \draw[-,line width=0.5mm,] (A) -- (B);
         \end{tikzpicture}
-        
+
     \fi
+    % \usebeamercolor{separator}%
+    % \usebeamerfont{framesubtitle}
+    % \textcolor{fg}{\rule{\textwidth}{1pt}}%
 }
 
 % Footer information line with title, author and slide number
