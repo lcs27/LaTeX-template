@@ -1,14 +1,20 @@
 # LaTeX-template
 This is a $\LaTeX$ template created by lcs27. This template aims at allowing Chinese-English-French multilanguage typing, by providing separable packages for the ease of modular building.
 
-# Fully-equipped template
-**Method of use:** 
-To use this template, first you need to configure your $\LaTeX$ interpreter into `XeLaTeX`.   
-Besides, you need to add following folders be in a same folder, which is called `sourcepath`
+## Fully-equipped template
+### Method of usage
+#### Overleaf template
+The whole package is provided as a template on overleaf. Please go to [link comming soon](comming-soon) and simply use it!
+
+#### Local
+To use this template in your local interpreter, first you need to configure your $\LaTeX$ interpreter into `XeLaTeX`.    
+
+Besides, you need to add following folders in a same folder, which is called `sourcepath`
 - `article`OR`beamer`, which gives the main part of template
 - `lang`, which provides language package
 - `packages`, which provides multiple packages detailed in support packages
 - logos, color files or other files    
+
 Finally, you begin your file redaction: 
 1. define the type of document, either an article or a presentation file(beamer)
 ```
@@ -38,33 +44,47 @@ Finally, you begin your file redaction:
 YOUR CONTENT HERE
 \end{document}
 ```
-## Article
-*Oooops, the template is usable, but I am writing the documentation and please wait several days!*
-## Beamer
-*Oooops, the template is usable, but I am writing the documentation and please wait several days!*
-## FengRuCup
-*Oooops, I am trying to implement this and please wait several days before using this functionality!*
+### Provided template
 
-# Support packages
-**ATTENTION!** These packages are all included in our fully-equipped template, you don't need to include it again. This part is only for users who need partial package. The tests are all done with `XeLaTeX` interpreter, problems may occur if you use other interpreter!    
+Up to now, three templates are provided. For details about these templates, please see their corresponding page:
+- [artcile](./article/Readme.md)
+- [beamer](./beamer/Readme.md)
+- FengruCup (Editing...)
 
-**Method of use:** ` \usepackage{path/to/package}`     
 
-*Remark*: Most of packages don't include so much new packages, but just regroup many others packages and add minor modification!
+## Support packages
+*ATTENTION! These packages are all included in our fully-equipped template, you don't need to include it again. This part is only for users who need partial package. The tests are all done with `XeLaTeX` interpreter, problems may occur if you use other interpreter!*
 
-## Mathmatical symbols
+**Method of usage:** ` \usepackage{path/to/package}`     
+
+*Remark*: Most of LCS27** packages don't include so much new packages, but just regroup many others packages and add minor modification! When you first use it, your interpreter may ask you to download it.
+
+### Mathmatical symbols
 [LCSsymbols](./symbols/LCSsymbols.sty)designed a set of mathmatical symbols which may be useful in mechanics, typically in fluid mechanics. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.     
-*To be implemented!* A passage using this template may be converted to classical template with a transformer provided in the folder.        
+*To be implemented!* An article using this package may be converted to classical packages with a transformer provided in the folder.        
 User's guide is provided in [this link](./symbols/LCSsymbols.pdf).   
 
-## Codes
+### Codes
 *Oooops, the template is usable, but I am writing the documentation and please wait several days!*
 
-## References
+### References
+*Oooops, the template is usable, but I am writing the documentation and please wait several days!*
 
-## Graphs
+### Graphs
+*Oooops, the template is usable, but I am writing the documentation and please wait several days!*
 
-# Language support
+## Language support
 *Oooops, I am trying to implement this and please wait several days before using this functionality!*
 
-# Implementing issues
+## Implementing issues
+
+## Copyright
+LCS27 template — Version 2.0
+Written in 2021-2022 by [LCS27](https://github.com/lcs27)
+This work is released under the CC0 1.0 Universal license. See the [accompanying LICENSE file](https://creativecommons.org/share-your-work/public-domain/cc0/) for details. 
+
+## Acknowledgements
+Many templates are used as a reference during the implementation of this template, as well as many websites who help to answer my question. Here I would like to thank these templates:
+- https://forge.delab.re/matteo/beamertheme-bruno
+- https://www.overleaf.com/latex/templates/beamer-fuld-16-9-ucph/mrfzkdxwjdhs
+- https://www.overleaf.com/latex/templates/template-para-apresentacoes-de-ufpb/kjtvffgvchkt
