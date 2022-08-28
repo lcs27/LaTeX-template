@@ -47,8 +47,8 @@ YOUR CONTENT HERE
 ### Provided template
 
 Up to now, three templates are provided. For details about these templates, please see their corresponding page:
-- [artcile](./article/Readme.md)
-- [beamer](./beamer/Readme.md)
+- [artcile](./article)
+- [beamer](./beamer)
 - FengruCup (Editing...)
 
 
@@ -60,9 +60,9 @@ Up to now, three templates are provided. For details about these templates, plea
 *Remark*: Most of LCS27** packages don't include so much new packages, but just regroup many others packages and add minor modification! When you first use it, your interpreter may ask you to download it.
 
 ### Mathmatical symbols
-[LCSsymbols](./symbols/LCSsymbols.sty)designed a set of mathmatical symbols which may be useful in mechanics, typically in fluid mechanics. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.     
+[LCSsymbols](./symbols/LCSsymbols.sty) designed a set of mathmatical symbols which may be useful in mechanics, typically in fluid mechanics. It regroups classical math packages and some personnal designed shortcut to help writing mathmatical paper.     
 *To be implemented!* An article using this package may be converted to classical packages with a transformer provided in the folder.        
-User's guide is provided in [this link](./symbols/LCSsymbols.pdf).   
+User's guide is provided in [this link](./example/article.pdf).   
 
 ### Codes
 *Oooops, the template is usable, but I am writing the documentation and please wait several days!*
@@ -74,7 +74,7 @@ User's guide is provided in [this link](./symbols/LCSsymbols.pdf).
 *Oooops, the template is usable, but I am writing the documentation and please wait several days!*
 
 ## Language support
-*Oooops, I am trying to implement this and please wait several days before using this functionality!*
+*Oooops, the template is usable, but I am writing the documentation and please wait several days!*
 
 ## Implementing issues
 
