@@ -79,12 +79,13 @@ User's guide is provided in [this link](./symbols/LCSsymbols.pdf).
 ## Implementing issues
 
 ## Copyright
-LCS27 template — Version 2.0
-Written in 2021-2022 by [LCS27](https://github.com/lcs27)
-This work is released under the CC0 1.0 Universal license. See the [accompanying LICENSE file](https://creativecommons.org/share-your-work/public-domain/cc0/) for details. 
+LCS27 template — Version 2.0    
+Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+This work is released under the CC0 1.0 Universal license. See the [accompanying LICENSE file](https://creativecommons.org/share-your-work/public-domain/cc0/) for details.     
 
 ## Acknowledgements
 Many templates are used as a reference during the implementation of this template, as well as many websites who help to answer my question. Here I would like to thank these templates:
 - https://forge.delab.re/matteo/beamertheme-bruno
 - https://www.overleaf.com/latex/templates/beamer-fuld-16-9-ucph/mrfzkdxwjdhs
 - https://www.overleaf.com/latex/templates/template-para-apresentacoes-de-ufpb/kjtvffgvchkt
+- https://gitee.com/xuanleng/qm-exams/blob/master/elegantbook.cls

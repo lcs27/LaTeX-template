@@ -1,88 +1,33 @@
+% LCS27 template — Version 2.0    
+% Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+% This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.     
+
 %--------------------- Packages ------------------------%
 %% Page
 \RequirePackage{geometry}
 \geometry{a4paper,left=2.54cm,right=2.54cm,top=3.18cm,bottom=3.18cm}
 \RequirePackage{titlesec}   %Margin
-\RequirePackage{geometry}
 \RequirePackage{inputenc}
 \RequirePackage{setspace}
 \RequirePackage{titletoc}
-\RequirePackage{\sourcepath{article/articlecolorthemeLCS27}}
-\RequirePackage{\sourcepath{packages/LCS27Packages}}
-\RequirePackage{\sourcepath{lang/chinese}}
 
+\ifdefined\stylepath
+\else
+    \newcommand{\stylepath}[1]{\sourcepath{article/#1}}
+\fi
 
-%---------------------Footer & Graph---------------%
-\newcommand{\schoollogo}[1]{\def \mbShowLogo{} \newcommand{\lcs@schoollogo}{#1}}
-\newcommand{\institute}[1]{\newcommand{\lcs@institute}{#1}}
+\ifdefined\packagepath
+\else
+    \newcommand{\packagepath}[1]{\sourcepath{packages/#1}}
+\fi
 
-\newcommand{\InsertLogo}{    
-    \begin{figure}[ht]
-        \centering
-            \includegraphics[height=3cm,keepaspectratio]{\lcs@schoollogo}
-    \end{figure}
-}
-\newcommand{\InsertSmallLogo}{
-    \begin{picture}(2,3)
-    \put(260,0){\includegraphics[height=3cm]{\lcs@schoollogo}}
-    \end{picture}
-}
-\newcommand{\MakeSimpleTitle}{
-    \thispagestyle{empty}
-    \let\newtitle\@title
-    \let\newauthor\@author
-    \let\newdate\@date
-    \begin{center}
-        \vspace{1cm}%Espace de 1cm
-        \Large{\textbf{\@title}}\par
-        \normalsize{\lcs@institute \quad \@author}\par
-        \normalsize{\@date}\par
-        \vspace{1cm}%Espace de 1cm
-    \end{center}
-}
+\ifdefined\languagefolderpath
+\else
+    \newcommand{\languagefolderpath}[1]{\sourcepath{lang/#1}}
+\fi
 
+\RequirePackage{\stylepath{articlecolorthemeLCS27}}
+\RequirePackage{\stylepath{articleinnerthemeLCS27}}
 
-\newcommand{\MakeCompletTitle}{
-    \thispagestyle{empty}
-    \InsertLogo
-    \let\newtitle\@title
-    \let\newauthor\@author
-    \let\newdate\@date
-    \begin{center}
-        \vspace{5cm}%Espace de 1cm
-        \huge{\textbf{\@title}}\par
-        \vspace{1.5cm}%Espace de 1cm
-        \Large{\lcs@institute\@author}\par
-        \vspace{1cm}%Espace de 1cm
-        \Large{\@date}\par
-        \vspace{1cm}%Espace de 1cm
-    \end{center}
-    \newpage
-}
-
-\newcommand{\MakeContentTitle}{
-    \thispagestyle{empty}
-    \InsertLogo
-    \let\newtitle\@title
-    \let\newauthor\@author
-    \let\newdate\@date
-    \begin{center}
-        \vspace{5cm}%Espace de 1cm
-        \huge{\textbf{\@title}}\par
-        \vspace{1.5cm}%Espace de 1cm
-        \Large{\@author}\par
-        \vspace{1cm}%Espace de 1cm
-        \Large{\@date}\par
-        \vspace{1cm}%Espace de 1cm
-    \end{center}
-    \tableofcontents
-    \newpage
-}
-
-\RequirePackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[RE,LO]{\includegraphics[height=1cm,keepaspectratio]{\lcs@schoollogo}}
-\fancyhead[CE,CO]{\newtitle}
-\fancyhead[LE,RO]{\newauthor}
-\fancyfoot[CE,CO]{\thepage}
+\RequirePackage{\packagepath{LCS27Packages}}
+\RequirePackage[chinese]{\languagefolderpath{LCS27language}}

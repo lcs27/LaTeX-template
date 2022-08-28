@@ -1,0 +1,79 @@
+% LCS27 template — Version 2.0    
+% Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+% This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.    
+\newcommand{\schoollogo}[1]{\def \mbShowLogo{} \newcommand{\lcs@schoollogo}{#1}}
+\newcommand{\institute}[1]{\newcommand{\lcs@institute}{#1}}
+
+\newcommand{\InsertLogo}{    
+    \begin{figure}[ht]
+        \centering
+            \includegraphics[height=3cm,keepaspectratio]{\lcs@schoollogo}
+    \end{figure}
+}
+\newcommand{\InsertSmallLogo}{
+    \begin{picture}(2,3)
+    \put(260,0){\includegraphics[height=3cm]{\lcs@schoollogo}}
+    \end{picture}
+}
+\newcommand{\MakeSimpleTitle}{
+    \thispagestyle{empty}
+    \let\newtitle\@title
+    \let\newauthor\@author
+    \let\newdate\@date
+    \begin{center}
+        \vspace{1cm}%Espace de 1cm
+        \Large{\textbf{\@title}}\par
+        \normalsize{\lcs@institute \quad \@author}\par
+        \normalsize{\@date}\par
+        \vspace{1cm}%Espace de 1cm
+    \end{center}
+}
+
+
+\newcommand{\MakeCompletTitle}{
+    \thispagestyle{empty}
+    \InsertLogo
+    \let\newtitle\@title
+    \let\newauthor\@author
+    \let\newdate\@date
+    \begin{center}
+        \vspace{5cm}%Espace de 1cm
+        \huge{\textbf{\@title}}\par
+        \vspace{1.5cm}%Espace de 1cm
+        \Large{\lcs@institute\@author}\par
+        \vspace{1cm}%Espace de 1cm
+        \Large{\@date}\par
+        \vspace{1cm}%Espace de 1cm
+    \end{center}
+    \newpage
+}
+
+\newcommand{\MakeContentTitle}{
+    \thispagestyle{empty}
+    \InsertLogo
+    \let\newtitle\@title
+    \let\newauthor\@author
+    \let\newdate\@date
+    \begin{center}
+        \vspace{5cm}%Espace de 1cm
+        \huge{\textbf{\@title}}\par
+        \vspace{1.5cm}%Espace de 1cm
+        \Large{\@author}\par
+        \vspace{1cm}%Espace de 1cm
+        \Large{\@date}\par
+        \vspace{1cm}%Espace de 1cm
+    \end{center}
+    \tableofcontents
+    \newpage
+}
+
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\includegraphics[height=1cm,keepaspectratio]{\lcs@schoollogo}}
+\fancyhead[CE,CO]{\newtitle}
+\fancyhead[LE,RO]{\newauthor}
+\fancyfoot[CE,CO]{\thepage}
+
+\setlength{\abovecaptionskip}{0.cm}
+\setlength{\belowcaptionskip}{-0.cm}

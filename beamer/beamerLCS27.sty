@@ -1,10 +1,22 @@
+% LCS27 template — Version 2.0    
+% Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+% This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.     
 \mode<presentation>
 
 \ifdefined\stylepath
 \else
-	\newcommand{\stylepath}[1]{\sourcepath{beamer/#1}}
+    \newcommand{\stylepath}[1]{\sourcepath{beamer/#1}}
 \fi
 
+\ifdefined\packagepath
+\else
+    \newcommand{\packagepath}[1]{\sourcepath{packages/#1}}
+\fi
+
+\ifdefined\languagefolderpath
+\else
+    \newcommand{\languagefolderpath}[1]{\sourcepath{lang/#1}}
+\fi
 
 \RequirePackage{\stylepath{beamerfontthemeLCS27}}
 \RequirePackage{\stylepath{beamercolorthemeLCS27}}
@@ -12,17 +24,18 @@
 \RequirePackage{\stylepath{beamerouterthemeLCS27}}
 
 
-\RequirePackage{\sourcepath{packages/LCS27Packages}}
-\RequirePackage{\sourcepath{lang/chinese}}
+\RequirePackage{\packagepath{LCS27Packages}}
+%\RequirePackage[main]{\sourcepath{lang/chinese}}
+\RequirePackage{\languagefolderpath{LCS27language}}
 
 %% Theorems
-\RequirePackage{etoolbox}
-\setbeamertemplate{theorems}[numbered] 
-\theoremstyle{definition}
-\newtheorem{proposition}{\propositionwd}[section]
-\newtheorem{remark}{\remarkwd}[section]
-\newtheorem{quiz}{\quizwd}[section]
-\newtheorem{answer}{\answerwd}[section]
+% \RequirePackage{etoolbox}
+% \setbeamertemplate{theorems}[numbered] 
+% \theoremstyle{definition}
+% \newtheorem{proposition}{\propositionwd}[section]
+% \newtheorem{remark}{\remarkwd}[section]
+% \newtheorem{quiz}{\quizwd}[section]
+% \newtheorem{answer}{\answerwd}[section]
 %\renewtheorem{lemma}{\lemmawd}[section]
 %\renewtheorem{theorem}{\theoremwd}[section]
 

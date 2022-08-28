@@ -1,0 +1,26 @@
+\ProvidesPackage{\languagefolderpath{LCS27language}}
+
+\RequirePackage{kvoptions}
+\RequirePackage{etoolbox}
+\SetupKeyvalOptions{family=LCS, prefix=LCS@, setkeys=\kvsetkeys}
+\newcommand{\ekv}[1]{\kvsetkeys{LCS}{#1}}
+\DeclareStringOption[chinese]{mainlanguage}
+\DeclareVoidOption{english}{\ekv{mainlanguage=english}}
+\DeclareVoidOption{chinese}{\ekv{mainlanguage=chinese}}
+\DeclareVoidOption{french}{\ekv{mainlanguage=french}}
+
+\ProcessKeyvalOptions*\relax
+
+\ifdefstring{\LCS@mainlanguage}{chinese}{
+\RequirePackage[main]{\languagefolderpath{chinese}}
+}{\RequirePackage{\languagefolderpath{chinese}}}
+
+\ifdefstring{\LCS@mainlanguage}{english}{
+\RequirePackage[main]{\languagefolderpath{english}}
+}{\RequirePackage{\languagefolderpath{english}}}
+
+\ifdefstring{\LCS@mainlanguage}{french}{
+\RequirePackage[main]{\languagefolderpath{french}}
+}{\RequirePackage{\languagefolderpath{french}}}
+
+

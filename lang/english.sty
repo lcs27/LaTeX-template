@@ -1,10 +1,28 @@
+% LCS27 template — Version 2.0    
+% Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+% This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.    
+\ProvidesPackage{\languagefolderpath{english}}
+\SetupKeyvalOptions{family=LCSEN, prefix=LCSEN@, setkeys=\kvsetkeys}
+\newcommand{\ekven}[1]{\kvsetkeys{LCSEN}{#1}}
+\DeclareStringOption[none]{title}
+\DeclareVoidOption{main}{\ekven{title=true}}
+\DeclareVoidOption{none}{\ekven{title=none}}
+
+\ProcessKeyvalOptions*\relax
+
 \RequirePackage{lipsum}
 
-\def\remarkwd{Remark}
-\def\quizwd{Quiz}
-\def\answerwd{Answer}
-\def\propositionwd{Proposition}
-\def\constant{Constant}
-\def\lemmawd{Lemma}
-\def\theoremwd{Theorem}
+
+
+\ifdefstring{\LCSEN@title}{true}{
+
+	\def\remarkwd{Remark}%
+	\def\quizwd{Quiz}%
+	\def\answerwd{Answer}%
+	\def\propositionwd{Proposition}%
+	\def\constant{Constant}%
+	\def\lemmawd{Lemma}%
+	\def\theoremwd{Theorem}%
+	\def\thankyouwd{Thank you!}
+}{}
 

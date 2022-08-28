@@ -1,12 +1,28 @@
+% LCS27 template — Version 2.0    
+% Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+% This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.    
+\ProvidesPackage{\languagefolderpath{french}}
+
+\SetupKeyvalOptions{family=LCSFR, prefix=LCSFR@, setkeys=\kvsetkeys}
+\newcommand{\ekvfr}[1]{\kvsetkeys{LCSFR}{#1}}
+\DeclareStringOption[none]{title}
+\DeclareVoidOption{main}{\ekvfr{title=true}}
+\DeclareVoidOption{none}{\ekvfr{title=none}}
+\ProcessKeyvalOptions*\relax
+
 %Important packages
-\RequirePackage[utf8]{inputenc}%For French accents
-\RequirePackage[T1]{fontenc}%For French babel
-\RequirePackage[main=english,french]{babel}
+\RequirePackage{inputenc}%For French accents
+\RequirePackage{fontenc}%For French babel
+%\RequirePackage{babel}
 %Useful Translations
-\def\remarkwd{Remarque}
-\def\quizwd{Quiz}
-\def\answerwd{Solution}
-\def\propositionwd{Proposition}
-\def\constant{Constante}
-\def\lemmawd{Lemme}
-\def\theoremwd{Théorème}
+
+\ifdefstring{\LCSFR@title}{true}{
+	\def\remarkwd{Remarque}%
+	\def\quizwd{Quiz}%
+	\def\answerwd{Solution}%
+	\def\propositionwd{Proposition}%
+	\def\constant{Constante}%
+	\def\lemmawd{Lemme}%
+	\def\theoremwd{Théorème}%
+	\def\thankyouwd{Merci!}
+}{}

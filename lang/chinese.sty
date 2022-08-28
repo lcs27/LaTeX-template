@@ -1,4 +1,16 @@
-%Important packages
+% LCS27 template — Version 2.0    
+% Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+% This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.     
+\ProvidesPackage{\languagefolderpath{chinese}}
+
+\SetupKeyvalOptions{family=LCSCH, prefix=LCSCH@, setkeys=\kvsetkeys}
+\newcommand{\ekvch}[1]{\kvsetkeys{LCSCH}{#1}}
+\DeclareStringOption[none]{title}
+\DeclareVoidOption{main}{\ekvch{title=true}}
+\DeclareVoidOption{none}{\ekvch{title=none}}
+
+\ProcessKeyvalOptions*\relax
+% Important packages
 \RequirePackage[fontset=none,UTF8]{ctex}
 \RequirePackage{zhlipsum}
 
@@ -6,7 +18,8 @@
 \setCJKsansfont{Dc62.ttf}[BoldFont={Dc48.ttf}, ItalicFont={Dc57.ttf}]
 \setCJKmonofont{Dc62.ttf}[BoldFont={Dc48.ttf}, ItalicFont={Dc57.ttf}]
 
-%Useful Translations
+\ifdefstring{\LCSCH@title}{true}{
+
 \def\remarkwd{注释}
 \def\quizwd{问题}
 \def\answerwd{答案}
@@ -15,3 +28,17 @@
 \def\theoremwd{定理}
 \def\constant{常数}
 \def\thankyouwd{谢谢！}
+}{}
+
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowu}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{8pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}

@@ -1,6 +1,9 @@
+% LCS27 template — Version 2.0    
+% Written in 2021-2022 by [LCS27](https://github.com/lcs27)    
+% This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.     
 \documentclass[aspectratio=169]{beamer}
 \newcommand{\sourcepath}[1]{../#1}
-%\newcommand{\stylepath}[1]{../beamer/#1}
+
 
 \usepackage{\sourcepath{beamer/beamerLCS27}}
 %\usepackage{indentfirst}
@@ -9,55 +12,114 @@
 \schoollogo{../logo/BeihangLogo.jpg}
 %\lablogo{../fig/CentraleSupelecRVB.jpg}
 
-\title{一个 \LaTeX 模板}
+\title{A \LaTeX \ Templete, 一个 \LaTeX 模板}
 \author{LCS27}
-
-\institute{我的学校学院}
+\institute{Overleaf模板作者}
 \date{\today}
-
+\renewcommand{\thankyouwd}{谢谢！Thank you! Merci!}
 
 
 \begin{document}
-
 \maketitle
-\begin{frame}{目录}
+
+\begin{frame}{Table of content-目录-Table des matières}
 \tableofcontents
 \end{frame}
-\section{章节一}
-\begin{frame}{标题一}{简述}
-\zhlipsum[10]
+\section{中英法三语支持}
+\begin{frame}{中英法}{多语言混排}
+
+这是一个中文-英语-法语混排的多语言模板。\par
+C'est un template multilangue pour l'utilisation chinois-anglais-français.\par
+This is a multilanguage template for chinese-english-french.\par
+\par
+This template is based on \texttt{XeLaTex} interpreter.\par
+This work is written in 2021-2022 by LCS27. It is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.\par
 \end{frame}
 
-\section{章节二}
-\begin{frame}[allowframebreaks]{标题二}{简述}
-\zhlipsum[11]
-\end{frame}
-\begin{frame}[allowframebreaks]{标题三}{简述}
-\zhlipsum[12]
-\end{frame}
 
-\section{章节三}
-\subsection{副章节一}
-\begin{frame}[allowframebreaks]{标题四}{具体内容}
-\zhlipsum[1]
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\textwidth]{../picture/1.jpg}
-\end{figure}
-\end{frame}
-\subsection{副章节二}
-\begin{frame}[allowframebreaks]{标题五}{具体内容}
-\zhlipsum[2]
+\section{Mathematic Tools:\texttt{LCS27symbols}}
+
+\begin{frame}{Regrouping powerful mathematic packages!}
+Many mathematical symbols are defined by multiple \LaTeX \ packages, the package \texttt{LCS27symbols} regroups them!
 \begin{itemize}
-    \item \zhlipsum[3]
-    \item \zhlipsum[4]
-    \item \zhlipsum[5]
+\item  \texttt{amsmath}: basic mathematic packages, providing format such as mathematic symbols and equations.
+\item  \texttt{amsfonts}: mathematic fonts.
+\item  \texttt{mathrsfs}: mathematic fonts.
+\item  \texttt{bbm}: mathematic fonts.
+\item  \texttt{amsthm}: theorem environment.
+\item  \texttt{amssymb}: advance mathematic symbols.
+\item  \texttt{mathtools} : advance mathematic symbols.
+\item  \texttt{siunitx} : scientific notation(\Eg  To write $\num{2e+9}$ you just need \texttt{$\backslash$num\{2e+9\}}).
+\item  \texttt{stmaryrd}: binary operator symbols.
 \end{itemize}
+For a quick-check webpage, you can go to \url{https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols}.
 \end{frame}
 
-\begin{frame}{标题六}{具体内容}
-\begin{block}{block title}
-ABCDSGJGAJLHKL8
-\end{block}
+\begin{frame}{Autodefined symbols}
+The package \texttt{LCS27symbols} also defines several symbols, especially useful for mechanic fileds!
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\texttt{$\backslash$deri\{a\}\{b\}} &  $\deri{a}{b}$\\
+\texttt{$\backslash$deriN\{a\}\{b\}\{n\}}& $\deriN{a}{b}{n}$\\
+\texttt{$\backslash$ParDeri\{a\}\{b\}} & $     \ParDeri{a}{b}    $\\
+\texttt{$\backslash$ParDeriN\{a\}\{b\}\{n\}} & $     \ParDeriN{a}{b}{n}    $\\
+\texttt{$\backslash$Deri\{a\}\{b\}}& $     \Deri{a}{b}   $\\
+\texttt{$\backslash$DeriN\{a\}\{b\}\{n\}}& $     \DeriN{a}{b}{n}   $\\
+\texttt{    a$\backslash$laplace b   }& $     a\laplace b   $\\
+\texttt{$\backslash$abs $\backslash$scalaire $\backslash$bbs   }& $     \abs \scalaire \bbs   $\\
+\texttt{    a$\backslash$nabla b, $\backslash$cbs $\backslash$nablabs $\backslash$dbs} & $      a \nabla b, \cbs \nablabs \dbs   $\\
+\texttt{    $\backslash$ssi,$\backslash$iff } & $     \ssi,\iff $\\
+\hline
+\end{tabular}
+\end{table}
 \end{frame}
+
+\begin{frame}{Autodefined symbols}
+The package \texttt{LCS27symbols} also defines several symbols, especially useful for mechanic fileds!
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\texttt{   $\backslash$Abb $\backslash$gbb $\backslash$Onebb}& $   \Abb \gbb \Onebb$\\
+\texttt{    $\backslash$Abf $\backslash$bbf $\backslash$Onebf} & $   \Abf \bbf \Onebf$\\
+\texttt{    $\backslash$Abs,$\backslash$bbs,$\backslash$Gammabs,$\backslash$deltabs,$\backslash$varphibs, $\backslash$nablabs}& $     \Abs,\bbs,\Gammabs,\deltabs,\varphibs, \nablabs   $\\
+\texttt{   $\backslash$Ao,$\backslash$bo,$\backslash$Gammao,$\backslash$deltao,$\backslash$arphio,$\backslash$nablao,$\backslash$Oneo}& $     \Ao,\bo,\Gammao,\deltao,\varphio,\nablao,\Oneo    $\\
+\texttt{   $\backslash$Aoo,$\backslash$boo,$\backslash$Gammaoo,$\backslash$deltaoo,$\backslash$varphioo,$\backslash$nablaoo,$\backslash$Oneoo}& $     \Aoo,\boo,\Gammaoo,\deltaoo,\varphioo,\nablaoo    ,\Oneoo$\\
+\texttt{   $\backslash$Ad,$\backslash$bd,$\backslash$Gammad,$\backslash$deltad,$\backslash$varphid,$\backslash$nablad,$\backslash$Oned} & $     \Ad,\bd,\Gammad,\deltad,\varphid,\nablad,\Oned    $\\
+\texttt{   $\backslash$Add,$\backslash$bdd,$\backslash$Gammadd,$\backslash$deltadd,$\backslash$varphidd,$\backslash$nabladd,$\backslash$Onedd } & $     \Add,\bdd,\Gammadd,\deltadd,\varphidd,\nabladd,\Onedd $\\
+\texttt{   $\backslash$Acal}& $     \Acal $\\
+\texttt{   $\backslash$setR,$\backslash$setC,$\backslash$setN,$\backslash$setZ,$\backslash$setRR }& $     \setR,\setC,\setN,\setZ,\setRR    $\\
+\texttt{   $\backslash$rel }& $     \rel  $\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Autodefined symbols}
+The package \texttt{LCS27symbols} also defines several symbols, especially useful for mechanic fileds!
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+
+\texttt{    $\backslash$eg,$\backslash$Eg   } & $     \eg,\Eg   $\\
+\texttt{    $\backslash$ie,$\backslash$Ie   } & $     \ie,\Ie   $\\
+\texttt{    $\backslash$cf,$\backslash$Cf   } & $     \cf,\Cf   $\\
+\texttt{   $\backslash$etc,$\backslash$vs,$\backslash$wrt,$\backslash$dof    } & $     \etc,\vs,\wrt,\dof    $\\
+\texttt{    $\backslash$etal,$\backslash$resp,$\backslash$st,$\backslash$aka,$\backslash$abr } & $     \etal,\resp,\st,\aka,\abr $\\
+\texttt{    $\backslash$tsum } & $     \tsum $\\
+\texttt{    $\backslash$grad $\backslash$xbs    } & $     \grad \xbs    $\\
+\texttt{    $\backslash$norm\{a\}  } & $     \norm{a}  $\\
+\texttt{$\backslash$Intv\{a\}\{b\}}&$\Intv{a}{b}$\\
+\texttt{$\backslash$IntIntv\{a\}\{b\}}&$\IntIntv{a}{b}$\\
+\texttt{$\backslash$UpperInt\{a\}}&$\UpperInt{a}$\\
+\texttt{$\backslash$LowerInt\{a\}}&$\LowerInt{a}$\\
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\section{Tables:\texttt{LCS27table}}
 \end{document}
