@@ -23,10 +23,33 @@
 \RequirePackage{\stylepath{beamerinnerthemeLCS27}}
 \RequirePackage{\stylepath{beamerouterthemeLCS27}}
 
+\RequirePackage{kvoptions}
+\RequirePackage{etoolbox}
+\SetupKeyvalOptions{family=LCS, prefix=LCS@, setkeys=\kvsetkeys}
+\newcommand{\ekv}[1]{\kvsetkeys{LCS}{#1}}
+\DeclareStringOption[chinese]{mainlanguage}
+\DeclareVoidOption{english}{\ekv{mainlanguage=english}}
+\DeclareVoidOption{chinese}{\ekv{mainlanguage=chinese}}
+\DeclareVoidOption{french}{\ekv{mainlanguage=french}}
+
+\ProcessKeyvalOptions*\relax
+
+\ifdefstring{\LCS@mainlanguage}{chinese}{
+\RequirePackage[chinese]{\languagefolderpath{LCS27language}}
+}{\RequirePackage{\languagefolderpath{chinese}}}
+
+\ifdefstring{\LCS@mainlanguage}{english}{
+\RequirePackage[english]{\languagefolderpath{LCS27language}}
+}{\relax}
+
+\ifdefstring{\LCS@mainlanguage}{french}{
+\RequirePackage[french]{\languagefolderpath{LCS27language}}
+}{\relax}
+
 
 \RequirePackage{\packagepath{LCS27Packages}}
 %\RequirePackage[main]{\sourcepath{lang/chinese}}
-\RequirePackage{\languagefolderpath{LCS27language}}
+
 
 %% Theorems
 % \RequirePackage{etoolbox}

@@ -15,7 +15,9 @@
 
 
 \ifdefstring{\LCSEN@title}{true}{
-
+	
+	\RequirePackage[english,french]{babel}
+	\AtBeginDocument{\selectlanguage{english}}
 	\def\remarkwd{Remark}%
 	\def\quizwd{Quiz}%
 	\def\answerwd{Answer}%

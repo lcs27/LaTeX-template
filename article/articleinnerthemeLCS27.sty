@@ -3,6 +3,10 @@
 % This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.    
 \newcommand{\schoollogo}[1]{\def \mbShowLogo{} \newcommand{\lcs@schoollogo}{#1}}
 \newcommand{\institute}[1]{\newcommand{\lcs@institute}{#1}}
+\renewcommand{\title}[1]{\newcommand{\lcs@title}{#1}}
+\renewcommand{\author}[1]{\newcommand{\lcs@author}{#1}}
+\let\newdate\@date
+\newcommand{\shortauthor}[1]{\newcommand{\lcs@shortauthor}{#1}}
 
 \newcommand{\InsertLogo}{    
     \begin{figure}[ht]
@@ -17,14 +21,11 @@
 }
 \newcommand{\MakeSimpleTitle}{
     \thispagestyle{empty}
-    \let\newtitle\@title
-    \let\newauthor\@author
-    \let\newdate\@date
     \begin{center}
         \vspace{1cm}%Espace de 1cm
-        \Large{\textbf{\@title}}\par
-        \normalsize{\lcs@institute \quad \@author}\par
-        \normalsize{\@date}\par
+        \Large{\textbf{\lcs@title}}\par
+        \normalsize{\lcs@institute \quad \lcs@author}\par
+        \normalsize{\newdate}\par
         \vspace{1cm}%Espace de 1cm
     \end{center}
 }
@@ -33,14 +34,11 @@
 \newcommand{\MakeCompletTitle}{
     \thispagestyle{empty}
     \InsertLogo
-    \let\newtitle\@title
-    \let\newauthor\@author
-    \let\newdate\@date
     \begin{center}
         \vspace{5cm}%Espace de 1cm
-        \huge{\textbf{\@title}}\par
+        \huge{\textbf{\lcs@title}}\par
         \vspace{1.5cm}%Espace de 1cm
-        \Large{\lcs@institute\@author}\par
+        \Large{\lcs@institute \quad \lcs@author}\par
         \vspace{1cm}%Espace de 1cm
         \Large{\@date}\par
         \vspace{1cm}%Espace de 1cm
@@ -51,14 +49,11 @@
 \newcommand{\MakeContentTitle}{
     \thispagestyle{empty}
     \InsertLogo
-    \let\newtitle\@title
-    \let\newauthor\@author
-    \let\newdate\@date
     \begin{center}
         \vspace{5cm}%Espace de 1cm
-        \huge{\textbf{\@title}}\par
+        \huge{\textbf{\lcs@title}}\par
         \vspace{1.5cm}%Espace de 1cm
-        \Large{\@author}\par
+        \Large{\lcs@author}\par
         \vspace{1cm}%Espace de 1cm
         \Large{\@date}\par
         \vspace{1cm}%Espace de 1cm
@@ -68,12 +63,17 @@
 }
 
 \RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[RE,LO]{\includegraphics[height=1cm,keepaspectratio]{\lcs@schoollogo}}
-\fancyhead[CE,CO]{\newtitle}
-\fancyhead[LE,RO]{\newauthor}
-\fancyfoot[CE,CO]{\thepage}
+\fancyhead[CE,CO]{\lcs@title}
+\ifdefined\lcs@shortauthor
+    \fancyhead[LE,RO]{\lcs@shortauthor}
+\else
+    \fancyhead[LE,RO]{\lcs@author}
+\fi
+\fancyfoot[CE,CO]{\thepage \ / \ \pageref{LastPage}}
 
 \setlength{\abovecaptionskip}{0.cm}
 \setlength{\belowcaptionskip}{-0.cm}
