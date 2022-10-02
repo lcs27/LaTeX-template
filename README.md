@@ -4,7 +4,7 @@ This is a $\LaTeX$ template created by lcs27. This template aims at allowing Chi
 ## Fully-equipped template
 ### Method of usage
 #### Overleaf template
-The whole package is provided as a template on overleaf. Please go to [link comming soon](comming-soon) and simply use it!
+The whole package is provided as a template on overleaf. Please go to [Overleaf template](https://www.overleaf.com/read/gjbchmtztjkg) and simply use it!
 
 #### Local
 To use this template in your local interpreter, first you need to configure your $\LaTeX$ interpreter into `XeLaTeX`.    
@@ -49,7 +49,7 @@ YOUR CONTENT HERE
 Up to now, three templates are provided. For details about these templates, please see their corresponding page:
 - [artcile](./article)
 - [beamer](./beamer)
-- FengruCup (Editing...)
+- Master Thesis
 
 
 ## Support packages
@@ -75,8 +75,6 @@ User's guide is provided in [this link](./example/article.pdf).
 
 ## Language support
 *Oooops, the template is usable, but I am writing the documentation and please wait several days!*
-
-## Implementing issues
 
 ## Copyright
 LCS27 template — Version 2.0    
