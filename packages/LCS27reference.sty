@@ -3,8 +3,14 @@
 % This work is released under the CC0 1.0 Universal license. See the https://creativecommons.org/share-your-work/public-domain/cc0/ for details.    
 
 %% Bibliography & Reference
-\RequirePackage[style=ieee]{biblatex} %Bibliography
+\usepackage[style=numeric-comp,backend=biber, maxcitenames=2, mincitenames=1, sorting=none, maxbibnames=4, uniquelist=false,doi=false,isbn=false,url=false,eprint=false]{biblatex} %Bibliography
 \RequirePackage{hyperref} %Reference
 \hypersetup{hidelinks}
 \RequirePackage{url} % Use url as reference
 \newcommand{\upcite}[1]{\textsuperscript{\cite{#1}}}
+
+\DeclareFieldFormat{postnote}{\mknormrange{#1}}
+\DeclareFieldFormat{volcitepages}{\mknormrange{#1}}
+\DeclareFieldFormat{multipostnote}{\mknormrange{#1}}
+\RequirePackage{csquotes}
+\renewcommand*{\postnotedelim}{\addcolon}

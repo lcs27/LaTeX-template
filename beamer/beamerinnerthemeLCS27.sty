@@ -94,6 +94,14 @@
     \end{frame}
 }
 
+\AtBeginSection[]
+{
+	\begin{frame}{\tocwd}
+		\transfade
+		\tableofcontents[sectionstyle=show/shaded,subsectionstyle=show/show/hide]
+	\end{frame}
+}
+
 \AtEndDocument{\usebeamertemplate{endpage}}
 
 \mode<all>

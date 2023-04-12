@@ -7,7 +7,7 @@
 %% Math Packages
 \RequirePackage{amsmath}%Math formula
 \RequirePackage{amsfonts}%Math fonts
-\RequirePackage{amsthm}%Theorem-like structures
+%\RequirePackage{amsthm}%Theorem-like structures
 \RequirePackage{amssymb}%Math symbols
 \RequirePackage{bbm}
 \RequirePackage{mathrsfs}%Math fonts
@@ -786,7 +786,6 @@
 \def\varsigmaoo{\overline{\overline{\varsigma}}}
 \def\varphioo{\overline{\overline{\varphi}}}
 
-\def\dtext{\text{d}}
 
 \def\eg{\emph{e.g.}} 
 \def\Eg{\emph{E.g.}}
@@ -805,7 +804,13 @@
 \def\abr{\emph{abr.}}
 \def\idem{\emph{id.}}
 
+\def\d{\textrm{d}}
+\def\dtext{\textrm{d}}
 
+\def\real{\real}
+\def\imag{\Im}
+\def\imagine{\Im}
+\def\Reynolds{\textrm{Re}}
 
 
 \renewcommand{\vec}[1]{\boldsymbol{#1}}
@@ -817,9 +822,10 @@
 \newcommand{\transpose}[1]{ (#1)^{\textit{T}}}
 
 \newcommand{\Intv}[2]{[#1,#2]}
-\newcommand{\IntIntv}[2]{\llbracket#1,#2\rrbracket}
+\newcommand{\IntIntv}[2]{\llbracket #1,#2 \rrbracket}
 \newcommand{\UpperInt}[1]{\lceil #1 \rceil}
 \newcommand{\LowerInt}[1]{\lfloor #1 \rfloor}
 
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
 
-
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
