@@ -827,3 +827,4 @@
         "snippet": "LowerInt{$1}",
         "detail" : "⌊#1⌋  (LCS)"
         }
+    }
