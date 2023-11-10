@@ -1,5 +1,5 @@
+//To add in your C:/Users/YOURNAME/.vscode/extensions/james-yu.latex-workshop-9.8.2/data/commands.json
 {
-    //To add in your C:/Users/YOURNAME/.vscode/extensions/james-yu.latex-workshop-9.8.2/data/commands.json
     "LCStest": {
         "snippet": "LCStest{$1}",
         "detail" : "test  (LCS)",
