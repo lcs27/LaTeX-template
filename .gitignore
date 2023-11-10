@@ -11,3 +11,5 @@
 *.bbl
 *.blg
 *-blx.bib
+*._wordcount_selection.tex
+commands.~json

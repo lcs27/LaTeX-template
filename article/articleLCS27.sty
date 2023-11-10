@@ -52,3 +52,15 @@
 \ifdefstring{\LCS@mainlanguage}{french}{
 \RequirePackage[french]{\languagefolderpath{LCS27language}}
 }{\relax}
+
+% Theorems
+\RequirePackage{etoolbox}
+\newtheorem{proposition}{\propositionwd}[section]
+\newtheorem{remark}{\remarkwd}[section]
+\newtheorem{quiz}{\quizwd}[section]
+\newtheorem{answer}{\answerwd}[section]
+\newtheorem{lemma}{\lemmawd}[section]
+\newtheorem{theorem}{\theoremwd}[section]
+\newtheorem{mproof}{\proofwd}[section]
+\newcommand{\qed}{$\blacksquare$}
+\newenvironment{proof}{\begin{mproof}}{\qed \end{mproof}}
